@@ -15,4 +15,5 @@ class Dog
       puts "I've been initialized!"
     end
   
+
 end   
