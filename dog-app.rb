@@ -27,7 +27,7 @@ def register()
   input_email = gets.strip
   puts "Appointment: "
   input_appointment = gets.strip
-  
+
   registered_dog = Dog.new(input_name, input_breed, input_owner_name, input_email, input_appointment)
   puts ("#{registered_dog.dog_name} has been registered") 
 end
