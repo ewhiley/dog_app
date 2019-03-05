@@ -28,7 +28,11 @@ def register()
   input_appointment = gets.strip
 
   registered_dog = Dog.new(input_name, input_breed, input_owner_name, input_email, input_appointment)
-  puts ("#{registered_dog.dog_name} has been registered") 
+  puts ("#{registered_dog.dog_name} is booked for their appointment at #{registered_dog.appointment}") 
+ 
+  File.open("appts.csv", "a") do |dog| 
+    dog.puts ("\n#{registered_dog.appointment},#{registered_dog.dog_name}")
+  end
 end
 
     print ("Select one of the followings options: 1- to Display Appts or 2- to Register a Dog ")
@@ -45,6 +49,7 @@ end
     else
       puts("Error. Invalid option.")
     end
+
 
     
 
