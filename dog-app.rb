@@ -11,12 +11,13 @@ class Dog
       @owner_email = owner_email
       @appointment = appointment
       @@counter += 1
-      puts "I've been initialized!"
+      @id = @@counter
     end
-  
 end   
 
-def register()
+# The register method gets dog information, creates a new dog instance and pushes it to the registered dogs array
+
+def register(registered_dogs)
   puts "Dog name: "
   input_name = gets.strip
   puts "Dog breed: "
@@ -30,8 +31,22 @@ def register()
 
   registered_dog = Dog.new(input_name, input_breed, input_owner_name, input_email, input_appointment)
   puts ("#{registered_dog.dog_name} has been registered") 
+  registered_dogs << registered_dog 
+  return registered_dogs
 end
 
 # dog1 = Dog.new("ellie", "dacshund", "elizabeth", "0408319636", "ejwhiley29@gmail.com", "12 May 2019")
-register()
+registered_dogs = []
+
+puts register(registered_dogs)
+puts register(registered_dogs)
+
+def display (registered_dogs)
+  registered_dogs.each do (dog)
+    puts ("dog id: #{dog.id}, name: #{dog.dog_name}, appointment: #{dog.appointment}")
+  end
+end
+
+display(registered_dogs)
+
 
