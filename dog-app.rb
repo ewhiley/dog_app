@@ -1,3 +1,4 @@
+# Sets up the dog class to provide a blueprint for registering dog objects 
 class Dog
   
      attr_accessor(:dog_name, :breed, :owner_name, :owner_phone, :appointment)
@@ -10,20 +11,36 @@ class Dog
        @appointment = appointment
      end
   end
-  
+
+# This method checks input that shouldn't contain numbers and asks the user to re-enter 
+  def input_checker_numbers(input_to_check)
+    arr_string = input_to_check.split("")
+    numbers = ('0'..'9').to_a
+    numbers.each do |num|
+        if arr_string.include?(num)
+            puts "Sorry your input contained numbers. Please try again"
+            print "> "
+            input_to_check = gets.strip.capitalize
+            input_checker_numbers(input_to_check)
+        end 
+    end
+    return input_to_check
+end  
+
+
+# This method registers dog details to create each dog object, validates the input with the checker method and writes it to a CSV. It also gives the user some feedback to say when the dog has been registered.  
   def register()
    puts "Dog name: "
-    input_name = gets.strip.capitalize
-    while input_name.class != String
-      "Please enter a valid dog name: "
-      input_name = gets.strip.capitalize
-    end
+    input_name = gets.strip
+    input_name = input_checker_numbers(input_name)
    puts "Dog breed: "
-    input_breed = gets.strip.capitalize
+    input_breed = gets.strip
+    input_breed = input_checker_numbers(input_breed)
    puts "Owner name: "
-    input_owner_name = gets.strip.capitalize
+    input_owner_name = gets.strip
+    input_owner_name = input_checker_numbers(input_owner_name)
    puts "Owner phone number: "
-    input_phone = gets.strip.capitalize
+    input_phone = gets.strip
    puts "Appointment (00:00 24 hour): "
     input_appointment = gets.strip
   
@@ -37,10 +54,12 @@ class Dog
 
   end
 
+  # This method provides a message to the user before exiting the program
 def exit_program()
   puts "Enjoy your day!"
 end
 
+# The menu is a while loop so users return to the main menu unless they choose exit. It accepts options 1, 2 or 3 but asks the user to try again if they don't. Option 1 displays the current state of the CSV, option 2 runs the register method and option 3 runs the exit method.  
 
 puts ("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 puts ("WELCOME TO THE DOG'S DAY APP")
@@ -74,3 +93,13 @@ while option != 1 && option != 2 &&  option != 3
      end
   
 end  
+
+# # # TESTING THE NUMBER CHECKER METHOD
+# test_array = ['9h7', '99' "r"]
+
+# test_array.each do |test_case|
+#   input_checker_numbers(test_case)
+#   puts input_checker_numbers
+# end 
+
+
