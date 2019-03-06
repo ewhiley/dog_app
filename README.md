@@ -14,3 +14,6 @@ The app offers two options, one is to display the days appointments and second, 
 
 Details of design & planning process:
 ![My image](https://github.com/ewhiley/dog_app/blob/master/docs/Brainstorming.jpg)
+![My image](https://github.com/ewhiley/dog_app/blob/master/docs/Planning%20menu.jpg)
+![My image](https://github.com/ewhiley/dog_app/blob/master/docs/Workflow.pdf)
+![My image](https://github.com/ewhiley/dog_app/blob/master/docs/Trello%202.png)
