@@ -101,5 +101,3 @@ end
 #   input_checker_numbers(test_case)
 #   puts input_checker_numbers
 # end 
-
-
