@@ -12,4 +12,5 @@ The app offers two options, one is to display the days appointments and second, 
 
 [README explains the higher level structure of the app (e.g. why modules or functions were used or why separate files were utilized).]
 
-![My image](dog_app/images/Brainstorming.jpg)
+Details of design & planning process:
+![My image](https://github.com/ewhiley/dog_app/blob/master/docs/Brainstorming.jpg)
