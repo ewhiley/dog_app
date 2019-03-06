@@ -18,7 +18,7 @@ The app offers two options, one is to display the days appointments and second, 
 ![Validation](https://github.com/ewhiley/dog_app/blob/master/docs/validation%20of%20input.png)
 
 
-[README explains the higher level structure of the app (e.g. why modules or functions were used or why separate files were utilized).]
+We chose to do a dog class because we would need to access several attributes relating to the registered dog. We chose a case statment into a while loop. The while loop prevents the app from ending before the user exits. The case statment is to cover the menu options, and respond with an error if the input isn't accurate. The register method calls for dog details to create each dog object, validates the input with the checker method and writes it to a CSV. It also gives the user some feedback to say when the dog has been registered. We decided to use a csv file to input appointments as you might do with a google calendar. The testing method tests the user input validation method without us having to test individually. The validation method is to ensure the user input has minimum error.
 
 Details of design & planning process:
 ![Brainstorming](https://github.com/ewhiley/dog_app/blob/master/docs/Brainstorming.jpg)
